@@ -1,0 +1,10 @@
+---
+- hosts: windows_demo_client
+  tasks:
+    - name: Demo Playbook for Windows target. Install IIS server and put initial index.html page
+      win_feature:
+        name: Web-Server
+        state: present
+ #   - name: Reboot server if installiong WEB server requires it
+ #     win_reboot:
+ #     when: win_feature.reboot_required
